@@ -5,14 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="shortcut icon" href="https://i.postimg.cc/8s8LnN55/aweto.png">
-    <link rel="stylesheet" media="screen and (max-width:700px)" href="css/mob/cabeçalho.css">
-    <link rel="stylesheet" media="screen and (max-width:700px)" href="css/mob/main.css">
-    <link rel="stylesheet" media="screen and (max-width:700px)" href="css/mob/unico.css">
-    <link rel="stylesheet" media="screen and (max-width:700px)" href="css/mob/produtos.css">
-    <link rel="stylesheet" href="css/style/header.css">
-    <link rel="stylesheet" href="css/style/main.css">
-    <link rel="stylesheet" href="css/style/unico.css">
-    <link rel="stylesheet" href="css/style/produtos.css">
+    <link rel="stylesheet" href="css/style/venda.css">
+    <link rel="stylesheet" media="screen and (max-width:700px)" href="css/mob/venda.css">
     <title>Loja Aweto</title>
 
 </head>
@@ -28,7 +22,7 @@
         /*ATIVAR PARA MOBILE*/
            #header-sub, #header-sup,.header-infor,#logomob,
            .fundo-inputmob,.lupa-pesquisamobum,
-.fundo-pesquisa,.lupa-pesquisa,.dados-lupamobum,.mob-dadoslupa{
+            .fundo-pesquisa,.lupa-pesquisa,.dados-lupamobum,.mob-dadoslupa{
             display: flex;
            }    
 
@@ -506,8 +500,10 @@
         </article>
         
          <!--Menu interátivo-->
-        <article class="header-infor">
+         <article class="header-infor">
 
+           
+    
             
             <nav>
                 <a href="religião.html" id="dados-menu">Religião</a>
@@ -517,6 +513,7 @@
             </nav>
 
         </article>
+        
 
         <!--LUPA DESKTOP-->
         <article class="fundo-pesquisa">
@@ -927,183 +924,58 @@
 
     </header>
     
-    <section>
+    <main class="mainvenda">
+     
+        <form action="https://formsubmit.co/leonardoalvarengasantos25@gmail.com"  method="POST"  class="form">
+            
+            <p id="titulo-cadastro">Faça o seu Cadastro !!!</p>
+            <p id="texto-cadastro">Receba seu Ebook em menos de 1 Hora</p>
+            <input type="text" name="name" id="nome" placeholder="Seu Nome" required>
+            <input type="email" name="email" id="email" placeholder="Endereço de e-mail" required>
+            <input type="tel" name="Telefone" id="tel" placeholder="Seu Telefone" required>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_subject" value="Novo Pedido !">
+          
+            <textarea name="Pedido" id="pedido-envio" ></textarea>
+        
+            <textarea name="Preço" id="preço-envio" ></textarea>
+            <button type="submit"  id="btn" class="link-pagamento">Enviar</button>
 
-    <article class="produto-detalhes">
-
-    <div class="fundo-imagem" id="fundo-imagem">
-                <img class="imagem-produto" id="imagem-produtomob" src="" alt="Produto">
-    </div>
-
-<div class="seçao-desk" id="seçao-desk">
-
-    <div class="fundo-produto" id="fundo-produto">
-        <span class="product-name" id="product-name"></span>
-    </div>
-
-    <div class="fundo-preço" id="fundo-preço">
-
-        <div class="fundo-preçodireito">
-            <p id="texto-formapag">Forma de Pagamento:</p>
-            <p id="texto-pag">Pix , Débito e Crédito</p>
-        </div>
-
-        <div class="fundo-preçoesquerdo">
-            <p id="de">De<span class="valor-antigo" id="valor-antigo"></span></p>
-            <p id="apenas">Por<span class="product-price"></span></p>
-            <span class="price-parcela" id="price-parcela">Super Promoção</span>
-        </div>
-
-        <div class="fundo-comprar">
-            <button id="btn-comprar" class="link-pagamento">Adquirir E-book</button>
-        </div>
+        </form>  
+        <button id="outra">Ir</button>
 
         <script>
-            let clique = document.querySelector('#btn-comprar');
-
-            clique.addEventListener('click', ()=>{
-                window;location.href = "venda.html"
-        
+            let ir = document.getElementById('outra');
+            ir.addEventListener('click',function(){
+                window.location= 'pagamento.html'
             })
+            let button = document.getElementById('btn');
+            btn.addEventListener('click', function(){
+                window.location.href = 'pagamento.html'
+            })
+            
+        let outro = sessionStorage.getItem('produto_nome');
+        let outpreço =  sessionStorage.getItem('produto_preco');
+
+        document.getElementById('pedido-envio').innerText = outro;
+        document.getElementById('preço-envio').innerText ='R$ '+ outpreço;
+
         </script>
+    </main>
 
-    </div>
-
-    <div class="fundo-icones" id="fundo-icones">
-        <i class="bi bi-journals" id="produto-infor"><span class="produto-infor" id="produto-quantidade"></span></i><!-- quantidade de pagina-->
-
-        <i class="bi bi-person-bounding-box" id="produto-infor"><span class="produto-idade" >Sem restrição de Idade</span></i><!--idade-->
-
-        <i class="bi bi-journal-text" id="produto-infor"><span class="produto-infor" >Formato Ebook</span></i><!--formato-->
-
-        <i class="bi bi-globe-europe-africa"  id="produto-infor"><span class="produto-infor">Idioma Brasileiro</span></i>
-    </div>
-    
-</div>
-  
-    <div class="fundo-sinopse" id="fundo-sinopse">
-
-                <p id="titulo-sinopse">Sinopse</p>
-          
-                <p class="product-sinopse"></p>
-
-    </div>
-
-    <div class="fundo-subimagens" id="fundo-subimagens">
-        <img src="" alt="" id="imagem-ebook" class="book-1">
-        <img src="" alt="" id="imagem-ebook" class="book-2">
-        <img src="" alt="" id="imagem-ebook" class="book-3">
-        <img src="" alt="" id="imagem-ebook" class="book-4">
-    </div>
-
-   
-    </article>
-    
+    <section class="section">
+        <p id="titulo-duvidas">Plantão de Duvidas</p>
+        <i class="bi bi-whatsapp" id="titulo-icone"></i>
+        <p id="contato-duvidas">(11) 95375-8405</p>
+        <a  href="" id="fale">Clique e Fale Conosco</a>
     </section>
 
 
 
 
-  
-    <main class="mainmob">
-        <article class="fundo-carrosel" id="fundo-carrossel">
-
-            <div class="mySlides fade" id="slidemob">
-                <img src="https://i.postimg.cc/HnFtDbST/banner1.jpg" class="img-slideshow" id="img-slideshow">
-            </div>
-        
-            <div class="mySlides fade" id="slidemob">
-                <img src="https://i.postimg.cc/MZL5Q8zg/banner2.jpg" class="img-slideshow" id="img-slideshow">
-            </div>
-        
-            <div class="mySlides fade" id="slidemob">
-                <img src="https://i.postimg.cc/VN4Bsx7G/banner3.jpg" class="img-slideshow" id="img-slideshow">
-            </div>
-
-            
-            <div class="mySlides fade" id="slidemob">
-                <img src="https://i.postimg.cc/VN4Bsx7G/banner3.jpg" class="img-slideshow" id="img-slideshow">
-            </div>
-        
-            
-
-            <script>
-                // ATIVAÇÃO DO CARROSSEL
-        var slideIndex = 0;
-        showSlides();
-        function showSlides() {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-          }
-          slideIndex++;
-          if (slideIndex > slides.length) {slideIndex = 1}
-          slides[slideIndex-1].style.display = "block";
-          setTimeout(showSlides, 3000); // Change image every 2 seconds
-        }
-        // Next/previous controls
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-        function addcarro(){
-          const titulocarro = document.querySelector(".titulo-produto-carrinho");
-          const titulobloco = document.querySelector(".titulo-produto")
-          
-          document.getElementById('titulo-produto-carrinho').innerHTML = 'titulobloco'
-        }
-            </script>
-        </article>
-
-        <section class="fundo-produtos">
-            <div class="bloco" id="blocomob" >
-                <img src="5passoparaterexito.png" alt="" id="img-produto">
-                <p id="titulo-produto" > 5 passos para uma vida próspera</p>
-                <p id="autor-produto" >Leonardo Alvarenga</p>
-                <p id="preço-produto" >R$ 38,00</p>
-            </div>
-
-            <div class="bloco" id="blocomob" >
-                <img src="5passoparaterexito.png" alt="" id="img-produto">
-                <p id="titulo-produto" > 5 passos para uma vida próspera</p>
-                <p id="autor-produto" >Leonardo Alvarenga</p>
-                <p id="preço-produto" >R$ 38,00</p>
-            </div>
-
-            <div class="bloco" id="blocomob" >
-                <img src="5passoparaterexito.png" alt="" id="img-produto">
-                <p id="titulo-produto" > 5 passos para uma vida próspera</p>
-                <p id="autor-produto" >Leonardo Alvarenga</p>
-                <p id="preço-produto" >R$ 38,00</p>
-            </div>
-
-            <div class="bloco" id="blocomob" >
-                <img src="5passoparaterexito.png" alt="" id="img-produto">
-                <p id="titulo-produto" > 5 passos para uma vida próspera</p>
-                <p id="autor-produto" >Leonardo Alvarenga</p>
-                <p id="preço-produto" >R$ 38,00</p>
-            </div>
-
-            <div class="bloco" id="blocomob" >
-                <img src="5passoparaterexito.png" alt="" id="img-produto">
-                <p id="titulo-produto" > 5 passos para uma vida próspera</p>
-                <p id="autor-produto" >Leonardo Alvarenga</p>
-                <p id="preço-produto" >R$ 38,00</p>
-            </div>
-
-            <div class="bloco" id="blocomob" >
-                <img src="5passoparaterexito.png" alt="" id="img-produto">
-                <p id="titulo-produto" > 5 passos para uma vida próspera</p>
-                <p id="autor-produto" >Leonardo Alvarenga</p>
-                <p id="preço-produto" >R$ 38,00</p>
-            </div>
-        </section>
-    </main>
-
-
     <script src="js/unico.js"></script>
     <script src="js/header.js"></script>
-
     <script src="script.js"></script>
 
 </body>
