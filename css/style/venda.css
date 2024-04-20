@@ -173,7 +173,7 @@ nav{
 }
 #btn{
     margin-top:20px;
-    width: 50%;
+    width: 30%;
     font-size: 30px;
     outline: 0;
     border: 0;
@@ -182,9 +182,13 @@ nav{
     background-color: #0794d3;
     color: white;
     transition: 0.5s;
+    cursor: pointer;
 }
 #btn:hover{
+    border-top: 8px solid #0794d3;
     border-bottom: 8px solid #0794d3;
+    border-left: 12px solid #0794d3;
+    border-right: 12px solid #0794d3;
     background-color: #0c212d;
 }
 

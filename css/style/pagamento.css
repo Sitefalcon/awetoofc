@@ -131,6 +131,97 @@ nav{
 
 
 
+.mainvenda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    width: 100%;
+    padding: 10px;
+}
+.texto-pagamento{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#titulopagamento{
+    font-size: 23px;
+    font-weight: bold;
+}
+#produto-pagamento{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0c212d;
+    text-align: center;
+    width: 90%;
+}
+
+.produto-detalhes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.product-name{
+    width: 80%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 23px;
+    font-weight: bold;
+    color: #0794d3;
+}
+.product-price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 23px;
+    font-weight: bold;
+    color: #0c212d;
+    padding: 10px;
+}
+.fundo-imagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.imagem-produto{
+    height: 380px;
+    padding: 18px;
+}
+
+.pagamento-final{
+    width: 20%;
+    font-size: 23px;
+    font-weight: bold;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    background-color: #0794d3;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.pagamento-final:hover{
+    background-color: #0c212d;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -171,7 +262,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width:20%;
     font-size: 20px;
     font-weight: bold;
     outline: 0;
