@@ -936,6 +936,7 @@
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_subject" value="Novo Pedido !">
+            <input type="hidden" name="_next" value="https://sitefalcon.github.io/awetoofc/pagamento.html">
           
             <textarea name="Pedido" id="pedido-envio" ></textarea>
         
@@ -943,13 +944,10 @@
             <button type="submit"  id="btn" class="link-pagamento">Enviar</button>
 
         </form>  
-        <button id="outra">Ir</button>
+
 
         <script>
-            let ir = document.getElementById('outra');
-            ir.addEventListener('click',function(){
-                window.location= 'pagamento.html'
-            })
+  
             let button = document.getElementById('btn');
             btn.addEventListener('click', function(){
                 window.location.href = 'pagamento.html'
